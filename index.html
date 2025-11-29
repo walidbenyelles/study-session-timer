@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Session Timer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Study Session Timer</h1>
+      <p class="subtitle">
+        Choose a subject and duration, then focus until the timer ends.
+      </p>
+
+      <section class="controls">
+        <div class="field">
+          <label for="subject">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            placeholder="e.g. Math, Java, English"
+          />
+        </div>
+
+        <div class="field">
+          <label for="duration">Duration (minutes)</label>
+          <input type="number" id="duration" min="1" max="180" value="25" />
+        </div>
+
+        <button id="startBtn">Start session</button>
+      </section>
+
+      <section class="timer-display">
+        <div class="time" id="time">25:00</div>
+        <div class="buttons">
+          <button id="pauseBtn" disabled>Pause</button>
+          <button id="resetBtn" disabled>Reset</button>
+        </div>
+      </section>
+
+      <section class="summary">
+        <p id="currentSession">No session running.</p>
+        <p id="sessionsCount">Sessions completed today: 0</p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

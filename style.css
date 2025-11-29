@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #1f2937, #020617);
+  color: #e5e7eb;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 1.5rem;
+  padding: 2.5rem 2rem;
+  max-width: 420px;
+  width: 100%;
+  border: 1px solid rgba(55, 65, 81, 0.9);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+  font-size: 1.7rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 0.9rem;
+  margin-bottom: 1.8rem;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 1.2rem;
+  margin-bottom: 1.8rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.field label {
+  font-size: 0.85rem;
+  color: #d1d5db;
+}
+
+.field input {
+  padding: 0.5rem 0.6rem;
+  border-radius: 0.7rem;
+  border: 1px solid #4b5563;
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+}
+
+.field input::placeholder {
+  color: #6b7280;
+}
+
+#startBtn {
+  grid-column: 1 / -1;
+  padding: 0.65rem 1.2rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: #0b1120;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+#startBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.4);
+}
+
+.timer-display {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.time {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.buttons button {
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid #4b5563;
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.buttons button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+#pauseBtn:not(:disabled):hover,
+#resetBtn:not(:disabled):hover {
+  border-color: #38bdf8;
+}
+
+.summary {
+  border-top: 1px solid rgba(31, 41, 55, 0.9);
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.summary p + p {
+  margin-top: 0.4rem;
+}
+
+@media (max-width: 480px) {
+  .app {
+    margin: 1.2rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .controls {
+    grid-template-columns: 1fr;
+  }
+
+  .time {
+    font-size: 2.4rem;
+  }
+}
