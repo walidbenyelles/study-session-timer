@@ -32,5 +32,5 @@ L’utilisateur choisit un sujet et une durée en minutes, lance le timer et sui
 
 ## Aperçu
 
-- Live demo : (à compléter après déploiement)
+- Live demo : https://studysessiontimer.netlify.app/
 - Code source : ce dépôt GitHub
